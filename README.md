@@ -25,20 +25,28 @@ This is an example [GatsbyJS application](https://www.gatsbyjs.org/) that demons
 1. Still in https://dashboard.fauna.com/, go to the GraphQL tab on the left
 2. Save the following GraphQL schema to a file and upload it with the 'Import Schema' button: 
 ```
-type Product {
-  title: String!
-  description: String
-  reviews: [Review] @relation
+type Response {
+    moods: [Mood]
+    age: Int
+    gender: String
+    sexuality: String
+    trans: Int
+    country: String
+    hue: Int
+    hue_sentiment: Int
+    saturation: Int
+    saturation_sentiment: Int
+    lightness: Int
+    lightness_sentiment: Int
 }
 
-type Review {
-  username: String!
-  text: String!
-  product: Product!
+type Mood {
+    name: String
+    strength: Int
 }
 
 type Query {
-  allProducts: [Product]
+  allResponses: [Response]
 }
 ```
 3. FaunaDB will now have created a Product and Review collection for you including indexes to query them. You should now be presented with a GraphQL playground, feel free to test a GraphQL query or look around in the dashboard for the collections and indexes.
