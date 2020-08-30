@@ -1,15 +1,23 @@
-type Product {
-  title: String!
-  description: String
-  reviews: [Review] @relation
+type Response {
+    moods: [String]
+    age: Int
+    gender: String
+    sexuality: String
+    trans: Int
+    country: String
+    hue: Int
+    hue_sentiment: Int
+    saturation: Int
+    saturation_sentiment: Int
+    lightness: Int
+    lightness_sentiment: Int
 }
 
-type Review {
-  username: String!
-  text: String!
-  product: Product!
+type Mood {
+    name: String
+    strength: Int
 }
 
 type Query {
-  allProducts: [Product]
+  allResponses: [Response]
 }
