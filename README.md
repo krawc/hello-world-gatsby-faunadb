@@ -26,7 +26,7 @@ This is an example [GatsbyJS application](https://www.gatsbyjs.org/) that demons
 2. Save the following GraphQL schema to a file and upload it with the 'Import Schema' button: 
 ```
 type Response {
-	moods: [Mood]
+    moods: [Mood]
     age: Int
     gender: String
     sexuality: String
