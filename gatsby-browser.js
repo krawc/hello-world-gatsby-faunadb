@@ -7,7 +7,7 @@ const client = new ApolloClient({
   request: operation => {
     operation.setContext({
       headers: {
-        Authorization: "Bearer fnADhmBawpACAjvYLpQUEMB8MJDMkRmG38PTIUNI",
+        Authorization: "Bearer fnAD0hnv_lACBhVUqHvGlhvj_ON0L-3UUw8w7WiT",
       },
     })
   },
